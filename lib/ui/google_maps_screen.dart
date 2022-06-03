@@ -13,12 +13,23 @@ class _GoogleMapsScreenKaryawanState extends State<GoogleMapsScreen> {
   final LatLng _currentPosition =
       const LatLng(0.9211113485406496, 104.45414034206269);
 
+  final Set<Marker> _home = {};
+  final LatLng _currentPositionHome = const LatLng(0.930880, 104.522857);
+
   @override
   void initState() {
     _markers.add(
       Marker(
         markerId: const MarkerId("0.9211113485406496, 104.45414034206269"),
         position: _currentPosition,
+        icon: BitmapDescriptor.defaultMarker,
+      ),
+    );
+
+    _home.add(
+      Marker(
+        markerId: const MarkerId("0.930880, 104.522857"),
+        position: _currentPositionHome,
         icon: BitmapDescriptor.defaultMarker,
       ),
     );
