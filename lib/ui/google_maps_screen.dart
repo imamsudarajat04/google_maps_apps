@@ -10,10 +10,8 @@ class GoogleMapsScreen extends StatefulWidget {
 
 class _GoogleMapsScreenKaryawanState extends State<GoogleMapsScreen> {
   final Set<Marker> _markers = {};
-  final LatLng _currentPosition =
-      const LatLng(0.9211113485406496, 104.45414034206269);
 
-  final Set<Marker> _home = {};
+  final LatLng _currentPosition = const LatLng(0.9211113485406496, 104.45414034206269);
   final LatLng _currentPositionHome = const LatLng(0.930880, 104.522857);
 
   @override
@@ -26,7 +24,7 @@ class _GoogleMapsScreenKaryawanState extends State<GoogleMapsScreen> {
       ),
     );
 
-    _home.add(
+    _markers.add(
       Marker(
         markerId: const MarkerId("0.930880, 104.522857"),
         position: _currentPositionHome,
